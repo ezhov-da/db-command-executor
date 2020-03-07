@@ -44,6 +44,6 @@
 
     - Наполнение таблицы
    
-    ```
+    ```shell script
     java -Ddb.command.executor.driverClass=com.mysql.cj.jdbc.Driver -Ddb.command.executor.url=jdbc:mysql://localhost:3306/test -Ddb.command.executor.queries="insert into test(id) values (1)___select * from test" -Ddb.command.executor.prop.user=admin -Ddb.command.executor.prop.password=admin -cp .:target/db-command-executor-0.1.jar:target/mysql-connector-java-8.0.19.jar ru.ezhov.dbcommandexecutor.Application
     ```
