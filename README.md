@@ -4,13 +4,14 @@
 
 ## Поддерживаемые свойства
 
-|свойство                             |описание|
-|-------------------------------------|--------------|
-|db.command.executor.driverClass      | название класса драйвера
-|db.command.executor.url              | url подключения
-|db.command.executor.prop             | свойства, которые будут напрямую переданы в DriverManager.getConnection(url, **properties**)), без **db.command.executor.prop**, например: ```db.command.executor.prop.user``` - будет передано **user** 
-|db.command.executor.queries.delimiter| разделитель для запросов, по умолчанию ```___```
-|db.command.executor.queries          | список запросов для выполнения
+|свойство                             |тип|описание  |
+|-------------------------------------|---|----------|
+|db.command.executor.driverClass      | String  |название класса драйвера
+|db.command.executor.url              | String  |url подключения
+|db.command.executor.prop             | String  |свойства, которые будут напрямую переданы в DriverManager.getConnection(url, **properties**)), без **db.command.executor.prop**, например: ```db.command.executor.prop.user``` - будет передано **user** 
+|db.command.executor.queries.delimiter| String  |разделитель для запросов, по умолчанию ```___```
+|db.command.executor.queries          | String  |список запросов для выполнения
+|db.command.executor.isIterate        | boolean |делать ли итерацию по ```ResultSet``` в случае запроса, возвращающего ```ResultSet```
 
 ## Пример сборки и запуска
 
