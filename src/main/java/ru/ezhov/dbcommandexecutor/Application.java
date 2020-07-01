@@ -23,7 +23,7 @@ public class Application {
         } catch (DbCommandExecutorException e) {
             LOG.log(
                     Level.SEVERE,
-                    "Ошибка выполнения запроса(ов)." +
+                    "Execute query exception." +
                             " driverClass: " + driverClass +
                             " url: " + url +
                             " isIterate: " + isIterate +
@@ -45,7 +45,7 @@ public class Application {
         Properties prop = new Properties();
         for (String name : propertyNames) {
             if (name.startsWith(property)) {
-                String s = name.substring(property.length() + 1 /*точка*/);
+                String s = name.substring(property.length() + 1 /*dot*/);
                 prop.setProperty(s, properties.getProperty(name));
             }
         }

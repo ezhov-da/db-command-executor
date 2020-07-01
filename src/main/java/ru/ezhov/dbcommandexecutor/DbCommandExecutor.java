@@ -7,9 +7,9 @@ import java.sql.Statement;
 import java.util.Properties;
 
 public class DbCommandExecutor {
-    private String driverClass;
-    private String url;
-    private Properties properties;
+    private final String driverClass;
+    private final String url;
+    private final Properties properties;
 
     public DbCommandExecutor(String driverClass, String url, Properties properties) {
         this.driverClass = driverClass;
@@ -40,7 +40,7 @@ public class DbCommandExecutor {
                 }
             }
         } catch (Exception e) {
-            throw new DbCommandExecutorException("Ошибка выполнения запроса: " + query, e);
+            throw new DbCommandExecutorException("Exception : " + query, e);
         }
     }
 }
